@@ -1,0 +1,22 @@
+.main-header {
+    margin-top: 20px;
+}
+
+.product-list {
+    max-height: 40vmax;
+    overflow-y: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px !important;
+}
+
+
+.create-button{
+    float: right;  
+    margin-bottom: 20px;  
+    margin-right: 20px;
+}
+
+.product-col {
+    position: sticky !important;
+}

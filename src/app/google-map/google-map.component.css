@@ -1,0 +1,14 @@
+.map-container{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 8%; 
+    margin-left: 25%; */
+   
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+

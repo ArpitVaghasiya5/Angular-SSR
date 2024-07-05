@@ -1,0 +1,42 @@
+<div>
+    <h2>Create New Product</h2>
+    <form [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Title" formControlName="title" name="title" required>
+        <mat-error>
+          Please provide a valid Title
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="price" type="number" formControlName="price" name="price" required>
+        <mat-error>
+          Please provide a valid Price
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="description" formControlName="description" name="description" required>
+        <mat-error>
+          Please provide a valid Description
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="category"  formControlName="category" name="category" required>
+        <mat-error>
+          Please provide a valid category
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="image"  formControlName="image" name="image" required>
+        <mat-error>
+          Please provide a valid Image URL
+        </mat-error>
+    </mat-form-field>
+  
+      <div class="button-container">
+        <button mat-raised-button color="Secondry" (click)="back()"> Back </button>
+        <button mat-raised-button color="primary" type="submit">Create Product</button>
+      </div>
+    </form>
+  </div>
+  

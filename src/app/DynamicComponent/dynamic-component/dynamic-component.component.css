@@ -1,0 +1,10 @@
+.header {
+    color: black;
+    margin-top :25px ;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+

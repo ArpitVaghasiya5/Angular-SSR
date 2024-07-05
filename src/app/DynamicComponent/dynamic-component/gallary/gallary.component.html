@@ -1,0 +1,7 @@
+<!-- <h3 class="header">Related Images</h3> -->
+<div class="gallery-container">
+  <div *ngFor="let image of data.Images" class="gallery-item">
+    <img [src]="getImageUrl(image.url)" alt="image">
+  </div>
+</div>
+

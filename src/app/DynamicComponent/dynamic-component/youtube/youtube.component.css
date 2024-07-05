@@ -1,0 +1,15 @@
+
+
+.youtube-container {
+    text-align: center; 
+    margin-bottom: 20px; 
+    
+  }
+  
+  .youtube-container iframe {
+    width: 68%;
+    margin-left: 3%;
+    height: 580px;
+    border-radius: 20px;
+  }
+  
