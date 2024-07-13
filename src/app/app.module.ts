@@ -1,11 +1,11 @@
 import { NgModule, SecurityContext } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { HttpClientModule, withInterceptors } from "@angular/common/http";
+import { withInterceptors, provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './Products/product-list/product-list.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import {  withFetch } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,7 +26,6 @@ import { DynamicComponent } from './RouteResolver/dynamic/dynamic.component';
 import { YoutubeComponent } from './DynamicComponent/dynamic-component/youtube/youtube.component';
 import { ImagewithdescriptionComponent } from './DynamicComponent/dynamic-component/imagewithdescription/imagewithdescription.component';
 import { GallaryComponent } from './DynamicComponent/dynamic-component/gallary/gallary.component';
-import { MatTableComponent } from './mat-table/mat-table.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -39,55 +38,48 @@ import { DirectiveTestComponent } from './TestingPractice/directive-test/directi
 import { HighlightDirective } from './TestingPractice/highlight.directive';
 import { ProductTestComponent } from './TestingPractice/product-test/product-test.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    ProductListComponent,
-    CreateProductComponent,
-    UpdateProductComponent,
-    ProductsComponent,
-    DynamicComponentComponent,
-    NotFoundComponentComponent,
-    DynamicComponent,
-    YoutubeComponent,
-    ImagewithdescriptionComponent,
-    GallaryComponent,
-    MatTableComponent,
-    GoogleMapComponent,
-    TestingComponent,
-    DemoPipe,
-    DirectiveTestComponent,
-    HighlightDirective,
-    ProductTestComponent
-  ],
-  imports: [
-    GoogleMapsModule,
-    BrowserModule,
-    AppRoutingModule,
-    MatButtonModule,
-    MatTableModule,
-    MatIconModule,
-    MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatIconModule ,
-    MatTooltipModule,
-    MatPaginator,
-    MatDialogModule,
-    MatInputModule ,
-    HttpClientModule,
-    MatCardModule,
-    MatDividerModule,
-    MatTableModule,
-    CommonModule,
-    MarkdownModule.forRoot(),
-    MatSelectModule
-  ],
-  providers: [
-    provideClientHydration(),
-    provideAnimationsAsync(),
-    provideHttpClient(withInterceptors([AuthInterceptor]), withFetch())
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        ProductListComponent,
+        CreateProductComponent,
+        UpdateProductComponent,
+        ProductsComponent,
+        DynamicComponentComponent,
+        NotFoundComponentComponent,
+        DynamicComponent,
+        YoutubeComponent,
+        ImagewithdescriptionComponent,
+        GallaryComponent,
+        GoogleMapComponent,
+        TestingComponent,
+        DemoPipe,
+        DirectiveTestComponent,
+        HighlightDirective,
+        ProductTestComponent
+    ],
+    bootstrap: [AppComponent], imports: [GoogleMapsModule,
+        BrowserModule,
+        AppRoutingModule,
+        MatButtonModule,
+        MatTableModule,
+        MatIconModule,
+        MatFormFieldModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatPaginator,
+        MatDialogModule,
+        MatInputModule,
+        MatCardModule,
+        MatDividerModule,
+        MatTableModule,
+        CommonModule,
+        MarkdownModule.forRoot(),
+        MatSelectModule], providers: [
+        provideClientHydration(),
+        provideAnimationsAsync(),
+        provideHttpClient(withInterceptors([AuthInterceptor]), withFetch()),
+        // provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }

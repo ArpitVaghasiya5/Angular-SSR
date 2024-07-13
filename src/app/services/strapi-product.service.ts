@@ -11,9 +11,6 @@ import { LanguageService } from './language.service';
 })
 export class StrapiProductService { 
 
-  //http://localhost:1337/api/task-components?populate=*
-  //http://localhost:1337/api/task-components?populate=deep&locale=nl
-
   constructor(
     private _httpClient : HttpClient,
     private languageService: LanguageService

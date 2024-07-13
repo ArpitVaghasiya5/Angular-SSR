@@ -1,4 +1,4 @@
-import {  HttpEvent, HttpRequest, HttpHandlerFn } from '@angular/common/http';
+import { HttpEvent, HttpRequest, HttpHandlerFn } from '@angular/common/http';
 import { Observable } from "rxjs";
 
 export const AuthInterceptor = (

@@ -9,7 +9,6 @@ import { NotFoundComponentComponent } from './RouteResolver/not-found-component/
 import { DynamicComponent } from './RouteResolver/dynamic/dynamic.component';
 import { routeResolver } from './routeResolver';
 import { YoutubeComponent } from './DynamicComponent/dynamic-component/youtube/youtube.component';
-import { MatTableComponent } from './mat-table/mat-table.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { TestingComponent } from './TestingPractice/testing/testing.component';
 import { DirectiveTestComponent } from './TestingPractice/directive-test/directive-test.component';
@@ -41,10 +40,6 @@ const routes: Routes = [
   {
     path: 'not-found',
     component: NotFoundComponentComponent,
-  },
-  {
-    path : 'mattable',
-    component : MatTableComponent
   },
   {
     path : 'googlemap',

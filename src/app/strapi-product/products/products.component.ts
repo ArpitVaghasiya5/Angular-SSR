@@ -23,14 +23,7 @@ export class ProductsComponent {
   error = '';
   markdown : any;
   products : Productss[] = [];
-  routes: Routes[] = [
-    {value: 'dynamic', viewValue: 'Dynamic-component'},
-    {value: 'products', viewValue: 'Products-component'},
-    {value:'googlemap', viewValue: 'Google-component'},
-    {value: 'create-product', viewValue: 'CreateProduct-component'},
-    {value: 'dynamic-rr', viewValue: 'Dynamic component RR'},
-    {value: 'mattable', viewValue: 'Mattable-component'}
-  ];    
+   
   
   constructor(
     private _strapiProductService: StrapiProductService,
@@ -68,40 +61,12 @@ export class ProductsComponent {
   }
 
 
- 
-  // displayedColumns: string[] =  ['id','image' ,'name', 'description', 'price','category', 'actions'];
-
-  // ngOnInit(){
-  //   this._strapiProductService.getAllProducts().subscribe({
-  //     next:(response)=>{
-  //       this.products = response.Data.map;
-  //     }
-  //   })
-  // }
-
-  // loadProducts(): void {
-  //   this.productService.getProducts().subscribe(
-  //     (response) => {
-  //       this.products = response.data.map((product: any) => ({
-  //         id: product.id,
-  //         name: product.attributes.Name,
-  //         description: product.attributes.Description,
-  //         price: product.attributes.Price,
-  //         imageUrl: product.attributes.Image?.data?.attributes.url // Handle null data for products without images
-  //       }));
-  //     },
-  //     (error) => {
-  //       console.error('Error fetching products:', error);
-  //     }
-  //   );
-  // }
-
-  DeleteProduct(arg0: any) {
-    throw new Error('Method not implemented.');
+  DeleteProduct(id : number) {
+    console.log("product deleting..")
   }
 
-  EditProduct(arg0: any) {
-    throw new Error('Method not implemented.');
+  EditProduct(id : number) {
+    console.log("editing product")
   }
 
 }

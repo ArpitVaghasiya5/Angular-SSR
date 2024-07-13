@@ -1,6 +1,5 @@
 import { Component, ViewContainerRef } from '@angular/core';
 import { StapiDynamicService } from '../../services/stapi-dynamic.service';
-import { Observable } from 'rxjs';
 import { YoutubeComponent } from './youtube/youtube.component';
 import { GallaryComponent } from './gallary/gallary.component';
 import { ImagewithdescriptionComponent } from './imagewithdescription/imagewithdescription.component';
@@ -43,16 +42,3 @@ export class DynamicComponentComponent {
   }
 }
 
-
-// console.log(item.ImageDComponentcode)
-          // switch (item.code) {
-          //   case 'VIDEO_SECTION':
-          //     this.viewContainerRef.createComponent(YoutubeComponent, item.YoutubeComponent);
-          //     break;
-          //   case 'GALLERY_SECTION':
-          //     this.viewContainerRef.createComponent(GallaryComponent, item.ImageGComponent);
-          //     break;
-          //   case 'IMAGE_DESCRIPTION_SECTION':
-          //     this.viewContainerRef.createComponent(ImagewithdescriptionComponent, item.ImageDComponent);
-          //     break;
-          // }
